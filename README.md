@@ -1,6 +1,3 @@
-- [Structure](#Structure)
-- [Commands](#Commands)
-
 ## 🚀 Structure
 ```
 /

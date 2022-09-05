@@ -1,5 +1,5 @@
-- [Structure](#🚀 Structure)
-- [Commands](#🧞 Commands)
+- [Structure](#Structure)
+- [Commands](#Commands)
 
 ## 🚀 Structure
 ```

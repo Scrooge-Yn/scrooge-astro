@@ -1,6 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+const cardData = [
+	{
+		href: 'https://docs.astro.build/',
+		title: 'Documentation',
+		body: 'Learn how Astro works and explore the official API docs.'
+	},
+	{
+		href: 'https://astro.build/integrations/',
+		title: 'Integrations',
+		body: 'Supercharge your project with new frameworks and libraries.'
+	},
+]
 ---
 
 <Layout title="Welcome to Astro.">
@@ -11,7 +24,10 @@ import Card from '../components/Card.astro';
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
 		<ul role="list" class="link-card-grid">
-			<Card
+			{cardData.map (item => (
+				<Card href={item.href} title={item.title} body={item.body} />
+			))}
+			<!-- <Card
 				href="https://docs.astro.build/"
 				title="Documentation"
 				body="Learn how Astro works and explore the official API docs."
@@ -30,7 +46,7 @@ import Card from '../components/Card.astro';
 				href="https://astro.build/chat/"
 				title="Chat"
 				body="Come say hi to our amazing Discord community. ❤️"
-			/>
+			/> -->
 		</ul>
 	</main>
 </Layout>
